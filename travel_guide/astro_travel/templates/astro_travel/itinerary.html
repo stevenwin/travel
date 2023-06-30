@@ -1,0 +1,17 @@
+{% extends 'astro_travel/base.html' %}
+
+{% block content %}
+  <h1>Your Astrological Travel Itinerary</h1>
+  <div id="itinerary">
+    {% if itinerary %}
+      <h2>Destination: {{ itinerary.destination }}</h2>
+      <h3>Astrological Sun: {{ itinerary.astro_sun }}</h3>
+      <h3>Astrological Moon: {{ itinerary.astro_moon }}</h3>
+      <h3>Country: {{ itinerary.country }}</h3>
+      <p>{{ itinerary.description }}</p>
+    {% else %}
+      <p>No itinerary found. Please go back to the home page and submit your details.</p>
+    {% endif %}
+  </div>
+  <a href="{% url 'home' %}">Go Back</a>
+{% endblock %}

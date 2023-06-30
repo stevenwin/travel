@@ -1,0 +1,1 @@
+# This file is intentionally left blank as per Django's standard structure for __init__.py files.

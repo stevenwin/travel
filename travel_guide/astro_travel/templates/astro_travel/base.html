@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Travel Guide</title>
+    <link rel="stylesheet" href="{% static 'astro_travel/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Astro Travel Guide</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2022 Astro Travel Guide. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'astro_travel/js/scripts.js' %}"></script>
+</body>
+</html>

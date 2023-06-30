@@ -1,0 +1,12 @@
+{% extends 'astro_travel/base.html' %}
+
+{% block content %}
+  <h1>Welcome to Astro Travel Guide</h1>
+  <form method="post" id="userInputForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="submit_form">Submit</button>
+  </form>
+  <div id="form_invalid" class="hidden">Please fill out all fields correctly.</div>
+  <div id="form_valid" class="hidden">Your form has been submitted. Please wait while we generate your itinerary.</div>
+{% endblock %}
